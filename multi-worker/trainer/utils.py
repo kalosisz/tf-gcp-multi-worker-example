@@ -18,8 +18,6 @@ def save_model(model_path, model):
     cluster_resolver = tf.distribute.cluster_resolver.TFConfigClusterResolver()
     is_chief = _is_chief(cluster_resolver)
 
-    print(cluster_resolver)
-    print(not is_chief)
     if not is_chief:
         model_path = _get_temp_dir(model_path, cluster_resolver)
 
