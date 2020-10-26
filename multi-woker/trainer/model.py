@@ -2,7 +2,7 @@ from tensorflow.keras.layers import concatenate, Input, Dense, Reshape
 from tensorflow.keras import Model
 
 
-def create_model(features, layer_sizes, loss, optimizer, metrics = []):
+def create_model(features, layer_sizes, loss, optimizer, metrics=[]):
     inputs = [Input(shape=(1), name=feature) for feature in features]
 
     common = concatenate(inputs)
