@@ -1,5 +1,5 @@
 # Multi-worker Tensorflow training on Google Cloud AI Platform
-A simple example of setting up and running multi-worker training Tensorflow model on Google Cloud. 
+A simple example of setting up and running Tensorflow multi-worker training on Google Cloud AI Platform. 
 
 This repository is complementary to the Medium article: 
 
