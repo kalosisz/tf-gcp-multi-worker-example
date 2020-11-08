@@ -130,3 +130,6 @@ dmypy.json
 
 # Ignore VSCode setting
 .vscode/
+
+# don't add local data
+data/
