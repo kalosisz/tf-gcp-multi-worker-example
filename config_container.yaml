@@ -2,12 +2,12 @@ trainingInput:
   scaleTier: CUSTOM
   masterType: n1-standard-4
   masterConfig:
-    imageUri: eu.gcr.io/szilard-ml-sandbox/multi-worker:latest
+    imageUri: eu.gcr.io/szilard-ml-sandbox/multi-worker:nightly
   useChiefInTfConfig: true
   workerType: n1-standard-4
-  workerCount: 2
+  workerCount: 1
   workerConfig:
-    imageUri: eu.gcr.io/szilard-ml-sandbox/multi-worker:latest
+    imageUri: eu.gcr.io/szilard-ml-sandbox/multi-worker:nightly
   scheduling:
     maxWaitTime: 3600s
     maxRunningTime: 7200s

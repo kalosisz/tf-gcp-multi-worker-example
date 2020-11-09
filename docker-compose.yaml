@@ -5,6 +5,7 @@ services:
     image: ${MULTI_WORKER_CONTAINER}
     volumes:
       - ${GOOGLE_APPLICATION_CREDENTIALS}:/tmp/keys/creds.json:ro
+      - ./data:/data:ro
     environment:
       GOOGLE_APPLICATION_CREDENTIALS: /tmp/keys/creds.json
       TF_CONFIG: "{
@@ -20,6 +21,7 @@ services:
     image: ${MULTI_WORKER_CONTAINER}
     volumes:
       - ${GOOGLE_APPLICATION_CREDENTIALS}:/tmp/keys/creds.json:ro
+      - ./data:/data:ro
     environment:
       GOOGLE_APPLICATION_CREDENTIALS: /tmp/keys/creds.json
       TF_CONFIG: "{

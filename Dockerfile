@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:2.3.1
+FROM tensorflow/tensorflow:nightly
 
 WORKDIR /training
 COPY multi-worker/trainer/ trainer/
