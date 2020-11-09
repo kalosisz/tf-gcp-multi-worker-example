@@ -40,11 +40,11 @@ def get_dataset(files_pattern, strategy, batch_size, mode):
         dataset = dataset.cache()
     if mode == Mode.TRAIN:
         dataset = dataset.shuffle(10 * batch_size)
+    dataset = dataset.repeat()
     dataset = dataset.batch(global_batch_size)
     dataset = dataset.map(
         _parse_example)  # vectorised tf.train.Example parsing
     dataset = dataset.prefetch(buffer_size=tf.data.experimental.AUTOTUNE)
-    dataset = dataset.repeat()
 
     return dataset
 
